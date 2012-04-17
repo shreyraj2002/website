@@ -1,1 +1,7 @@
-A tornado app template preconfigured for sqlalchemy and wtforms
+A tornado app for a personal website and associated blog. 
+
+Requirements:
+
+SQLAlchemy / WTForms
+
+Google Webfonts
