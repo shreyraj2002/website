@@ -19,6 +19,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 import forms
 import models
 import uimodules
+import handlers
 
 # Library imports
 
@@ -27,13 +28,15 @@ import uimodules
 # Options
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, type=bool)
-define("db_path", default='sqlite:////tmp/test.db', type=str)
+define("db_path", default='sqlite:///db/storage.db', type=str)
 
 
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
           url(r'/', IndexHandler, name='index'),
+          url(r'/index', IndexHandler, name='index2'),
+          url(r'/blog/', BlogHandler, name='blog'),
         ]
         settings = dict(
           debug=options.debug,

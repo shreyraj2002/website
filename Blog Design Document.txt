@@ -1,0 +1,29 @@
+Blog Design Document
+
+
+Elements of Design:
+
+	Individual posts in Chronilogical order
+
+	Comment system on each individual blog entry
+		Captcha System (Google reCaptcha)
+
+	Sharing System - Widgets
+
+	Master list of blog entries with quick description.
+
+	Quick list of Blog entries (list)
+
+SQL Model:
+	
+	Blog ID
+	Blog Description
+	Date
+	Blog Content
+		Ability to embed objects / images...
+
+	Blog ID
+	Comment ID
+	Comments
+	Author
+

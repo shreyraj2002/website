@@ -3,9 +3,16 @@ from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
+
 Base = declarative_base()
 
+
 def init_db(engine):
-  Base.metadata.create_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
 
 # Put your models here
+
+
+
+# import your models.
+from models.auth import Group, Permission, User
