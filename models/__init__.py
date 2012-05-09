@@ -4,14 +4,19 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
-Base = declarative_base()
+engine = create_engine('sqlite:///db/storage.db', convert_unicode=True, echo=True)
+dbsession = scoped_session(sessionmaker(autocommit=False,
+                                         autoflush=False,
+                                         bind=engine))
+DeclarativeBase = declarative_base()
+DeclarativeBase.query = dbsession.query_property()
+metadata = DeclarativeBase.metadata
 
 
 def init_db(engine):
-    Base.metadata.create_all(bind=engine)
+    DeclarativeBase.metadata.create_all(bind=engine)
 
 # Put your models here
-
 
 
 # import your models.
