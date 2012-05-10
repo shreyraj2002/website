@@ -1,5 +1,4 @@
 # Python imports
-import os
 
 # Tornado imports
 import tornado.auth

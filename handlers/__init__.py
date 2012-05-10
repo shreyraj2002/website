@@ -17,6 +17,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 #Handler Imports
 from handlers.blog import BlogHandler
+from handlers.base import AboutHandler, CodeHandler, ResumeHandler
 
 import forms
 import uimodules
@@ -33,6 +34,9 @@ class Application(tornado.web.Application):
         handlers = [
           url(r'/', IndexHandler, name='index'),
           url(r'/index', IndexHandler, name='index2'),
+          url(r'/about', AboutHandler, name='about'),
+          url(r'/code', CodeHandler, name='code'),
+          url(r'/resume', ResumeHandler, name='resume'),
           url(r'/blog', BlogHandler, name='blog'),
         ]
         settings = dict(
