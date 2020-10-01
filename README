@@ -1,7 +1,7 @@
-A tornado app for a personal website and associated blog. 
+                                                         A tornado app for a personal website and associated blog. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      
+      Requirements:
+                   	SQL Alchemy / WTForms
+                   	Google Web fonts
 
-Requirements:
-
-SQLAlchemy / WTForms
-
-Google Webfonts
